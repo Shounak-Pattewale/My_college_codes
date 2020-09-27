@@ -42,9 +42,15 @@ def mergeSort(a,p,r):
 		mergeSort(a, q+1, r) 
 		merge(a, p, q, r) 
 
-a = [6, 5, 1, 8, 3, 10, 11, 12, 13] 
-n = len(a) 
-print ("Given array is") 
+if __name__ == '__main__':
+    a=[]
+    n= int(input("\nEnter total no of elements : "))
+    for i in range(n): 
+        print("Enter value",i+1," : ")    
+        a.append(int(input()))
+# a = [6, 5, 1, 8, 3, 10, 11, 12, 13] 
+# n = len(a) 
+print ("\nGiven array is") 
 print(a)
 
 mergeSort(a,0,n-1) 

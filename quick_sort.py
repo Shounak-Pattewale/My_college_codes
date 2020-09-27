@@ -23,8 +23,15 @@ def quickSort(arr, low, high):
 		quickSort(arr, low, pi-1)
 		quickSort(arr, pi+1, high)
 
-arr = [6, 5, 1, 8, 3, 10, 11, 12, 13]
-print ("Given array is") 
+if __name__ == '__main__':
+    arr=[]
+    n= int(input("Enter total no of elements : "))
+    for i in range(n): 
+        print("Enter value",i+1," : ")    
+        arr.append(int(input()))
+
+# arr = [6, 5, 1, 8, 3, 10, 11, 12, 13]
+print ("\nGiven array is") 
 print(arr)
 
 n = len(arr)
