@@ -1,3 +1,7 @@
+import time
+from datetime import datetime
+
+start = time.time()
 while(True):
         print("\n\nFor First Matrix")
         size = int(input("\nEnter number of rows and columns : "))
@@ -125,3 +129,16 @@ while(True):
                 return c
         print ("\nResultant Matrix : ")
         print (straight(a,b))
+        break
+
+# datetime object containing current date and time
+now = datetime.now()
+ 
+print("now =", now)
+
+# dd/mm/YY H:M:S
+dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+print("date and time =", dt_string)	
+
+end = time.time()
+print(f'Running time : {end-start}')
