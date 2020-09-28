@@ -1,0 +1,5 @@
+library(lsr)
+modeOf(iris$Sepal.Width)
+maxFreq(iris$Sepal.Width)
+data("iris")
+force(iris)
