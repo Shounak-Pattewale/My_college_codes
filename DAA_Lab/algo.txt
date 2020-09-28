@@ -1,0 +1,121 @@
+Algorithm: Greedy-Fractional-Knapsack (w[1..n], p[1..n], W) 
+
+for i = 1 to n 
+   do x[i] = 0 
+weight = 0 
+for i = 1 to n 
+   if weight + w[i] ≤ W then  
+      x[i] = 1 
+      weight = weight + w[i] 
+   else 
+      x[i] = (W - weight) / w[i] 
+      weight = W 
+      break 
+return x
+Analysis
+If the provided items are already sorted into a decreasing order of piwi, then the whileloop takes a time in O(n); Therefore, the total time including the sort is in O(n logn).
+
+
+Algorithm for Merge sort : Theta(n logn)
+
+MergeSort(l,h)
+{
+    if(l<h)
+    {
+        mid = (l+h)/2;
+        MergeSort(l,mid);
+        MergeSort(mid+1,h);
+        Merge(l,mid,h);
+    }
+}
+
+Algorithm mergeSort(S, C)
+Input 
+sequence S with n
+elements, comparator C
+Output 
+sequence S sorted
+according to C
+if S.size() > 1
+(S 1 , S 2 )  partition(S, n/2)
+mergeSort(S 1 , C)
+mergeSort(S 2 , C)
+S  merge(S 1 , S 2 )
+
+Algorithm merge(A, B)
+Input sequences A and B with
+n/2 elements each
+Output sorted sequence of A  B
+S  empty sequence
+while A.isEmpty()  B.isEmpty()
+if A.first().element() < B.first().element()
+S.insertLast(A.remove(A.first()))
+else
+S.insertLast(B.remove(B.first()))
+while A.isEmpty()
+S.insertLast(A.remove(A.first()))
+while B.isEmpty()
+S.insertLast(B.remove(B.first()))
+return S
+
+
+Algorithm for Quick sort
+
+Prims
+
+MST-Prim(G, w, r)
+Q = V[G];
+for each u  Q
+Input– Graph, Weight, Root
+Initialize the min priority queue Q to contain
+all the vertices.
+key[u] = ;
+key[r] = 0;
+Set the key of each vertex to ∞
+Root’s key is set to 0
+p[r] = NULL;
+Set the parent of root to NIL
+while (Q not empty)
+Until queue become null set
+u = ExtractMin(Q);
+for each v  Adj[u]
+if (v  Q and w(u,v) < key[v])
+Set the parent of ‘v’ as ‘u’
+p[v] = u;
+key[v] = w(u,v);
+Set the key of v = weight of edge
+connecting uv
+
+MST-Prim(G, w, r)
+
+Q = V[G];
+for each u  Q
+key[u] = ;
+key[r] = 0;
+
+p[r] = NULL;
+
+while (Q not empty)
+u = ExtractMin(Q);
+for each v  Adj[u]
+if (v  Q and w(u,v) < key[v])
+p[v] = u;
+key[v] = w(u,v);
+
+Krushkal
+
+Kruskal()
+
+{
+
+T = ;
+for each v  V
+
+MakeSet(v);
+sort E by increasing edge weight w
+for each (u,v)  E (in sorted order)
+if FindSet(u)  FindSet(v)
+T = T U {{u,v}};
+Union(FindSet(u), FindSet(v));
+}
+
