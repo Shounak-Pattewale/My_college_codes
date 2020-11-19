@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 Playing with conflicts
+=======
+From Shounak
+>>>>>>> 66d3a1462a7310d6d5f1faa484d22bb6e7136669
