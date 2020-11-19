@@ -1,7 +1,4 @@
 Playing with conflicts
 From Shounak
-<<<<<<< HEAD
-=======
 
 Playing with conflicts 2.0
->>>>>>> taha
